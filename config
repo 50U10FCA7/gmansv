@@ -1,0 +1,11 @@
+username
+usergroup
+/home/username/gman_repositories
+/home/username/gmod
+master
+
+1] - user name
+2] - repository access group
+3] - repositories directory [full path]
+4] - gmod root directory [full path]
+5] - repository deploy branch
