@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
+if [ -z "$3" ]; then
 	read repositories -p "Enter new repositories path: "
 else
-	repositories=$1
+	repositories=$3
 fi
 
 mkdir $repositories
