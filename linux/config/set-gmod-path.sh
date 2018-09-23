@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
+if [ -z "$3" ]; then
 	read gmod -p "Enter new gmod path: "
 else
-	gmod=$1
+	gmod=$3
 fi
 
 for repository in $config_repositories/*/; do
