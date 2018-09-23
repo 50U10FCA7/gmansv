@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
+if [ -z "$3" ]; then
 	read branch -p "Enter new deploy branch: "
 else
-	branch=$1
+	branch=$3
 fi
 
 cd $config_repositories
