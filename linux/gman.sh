@@ -25,4 +25,5 @@ config_branch="master"
 
 
 cd $library
-source $script
+source $script.sh
+cd ..
