@@ -1,21 +1,16 @@
 #!/bin/bash
 
-if [-z "$1"]; then
+if [ -z "$3" ]; then
 	read name -p "Enter repository name: "
 else
-	name=$1
+	name=$3
 fi
 
-if [-z "$2"]; then
+if [ -z "$4" ]; then
 	read branch -p "Enter new deploy branch: "
 else
-	branch=$2
+	branch=$4
 fi
-
-config="./../../config"
-readline="./../utils/rline.sh"
-
-config_repositories=`$readline $config 3`
 
 repository=$config_repositories"/"$name".git/"
 
