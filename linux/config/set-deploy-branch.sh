@@ -6,6 +6,10 @@ else
 	branch=$3
 fi
 
+gman="./../gman.sh"
+writeline="./../utils/wline.sh"
+bash $writeline $gman 22 "config_branch='$branch'"
+
 cd $config_repositories
 for repository in */; do
     cd $repository
@@ -14,7 +18,3 @@ for repository in */; do
     git worktree add $addon $branch
     cd $config_repositories
 done
-
-gman="./../gman.sh"
-writeline="./../utils/wline.sh"
-bash $writeline $gman 22 "config_branch='$branch'"
