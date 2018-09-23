@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
+if [ -z "$3" ]; then
 	read user -p "Enter new user: "
 else
-	user=$1
+	user=$3
 fi
 
 for repository in $config_repositories/*/; do
