@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
+if [ -z "$3" ]; then
 	read group -p "Enter new group: "
 else
-	group=$1
+	group=$3
 fi
 
 for repository in $config_repositories/*/; do
