@@ -16,4 +16,4 @@ repository=$config_repositories"/"$name".git/"
 
 cd $repository
 echo $branch > addons-branch
-git worktree add $repository $branch
+git worktree add $config_gmod"/garrysmod/addons/"$name $branch
