@@ -10,7 +10,7 @@ cd $config_repositories
 for repository in */; do
     addon=$config_gmod"/garrysmod/addons/"$(basename $repository)
     cd $repository
-    echo $branch > $repository"/addons-branch"
+    echo $branch > $repository"addons-branch"
     git worktree add $addon $branch
     cd $config_repositories
 done
