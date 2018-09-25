@@ -18,6 +18,11 @@ mkdir $addon
 chown -R $config_user:$config_group $addon
 chmod -R 770 $addon
 
+prev_path=$(pwd)
+cd $repository
+git init --bare
+cd $prev_path
+
 writeline="./../utils/wline.sh"
 bash $writeline ./post-receive 3 "addons='$config_gmod/garrysmod/addons/'"
 bash $writeline ./post-receive 3 "name='$name'"
@@ -26,8 +31,6 @@ bash $writeline ./post-receive 3 "branch='$config_branch'"
 chmod -R 750 $repository"/hooks"
 cp $config_repositories"/hook-update.sh" $repository"/hooks/post-receive"
 
-cd $repository
-git init --bare
 #echo $addons > addons
 #echo $name > addon
 #echo $config_branch > addon-branch
