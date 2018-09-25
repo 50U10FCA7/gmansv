@@ -30,8 +30,8 @@ cp $config_repositories"/hook-update.sh" $postreceive
 
 writeline="./../utils/wline.sh"
 bash $writeline $postreceive 3 "addons='$config_gmod/garrysmod/addons/'"
-bash $writeline $postreceive 3 "name='$name'"
-bash $writeline $postreceive 3 "branch='$config_branch'"
+bash $writeline $postreceive 4 "name='$name'"
+bash $writeline $postreceive 5 "branch='$config_branch'"
 
 #echo $addons > addons
 #echo $name > addon
