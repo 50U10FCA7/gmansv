@@ -10,8 +10,9 @@ mkdir $repositories
 chown -R $config_user:$config_group $repositories
 chmod -R 777 $repositories
 
+cp -r repositories-hooks/* $repositories
+
 if [ -d $config_repositories ]; then
-	cp -r repositories-hooks/* $repositories
 	cp -r $config_repositories/* $repositories
 
 	rm -rf $config_repositories
