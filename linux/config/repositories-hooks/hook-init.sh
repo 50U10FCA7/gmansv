@@ -1,11 +1,11 @@
 #!/bin/bash
 
-addons=$(cat addons)
-name=$(cat addon)
-branch=$(cat addon-branch)
-addon=$addons$name
+#addons=$(cat addons)
+#name=$(cat addon)
+#branch=$(cat addon-branch)
+#addon=$addons$name
 
-git worktree add $addon $branch
+#git worktree add $addon $branch
 
 cd hooks
 
