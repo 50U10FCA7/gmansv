@@ -1,8 +1,8 @@
 #!/bin/bash
 
-addons=$(cat addons)
-name=$(cat addon)
-branch=$(cat addon-branch)
+addons=""
+name=""
+branch=""
 addon=$addons$name
 
 repository=$(pwd)
