@@ -10,7 +10,7 @@ gman="./../gman.sh"
 writeline="./../utils/wline.sh"
 
 for repository in $config_repositories/*/; do
-    bash $writeline $repository"addons" 3 "addons='$gmod/garrysmod/addons/'"
+    bash $writeline $repository"hooks/post-receive" 3 "addons='$gmod/garrysmod/addons/'"
 done
 
 bash $writeline $gman 21 "config_gmod='$gmod'"
