@@ -12,8 +12,7 @@ else
 	branch=$4
 fi
 
-repository=$config_repositories"/"$name".git/"
+postreceive=$config_repositories"/"$name".git/hooks/post-receive"
 
-cd $repository
-echo $branch > addons-branch
-git worktree add $config_gmod"/garrysmod/addons/"$name $branch
+writeline="./../utils/wline.sh"
+bash $writeline $postreceive 6 "branch=\"$branch\""
