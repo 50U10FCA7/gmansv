@@ -13,4 +13,4 @@ for repository in $config_repositories/*/; do
     bash $writeline $repository"hooks/post-receive" 3 "addons='$gmod/garrysmod/addons/'"
 done
 
-bash $writeline $gman 21 "config_gmod='$gmod'"
+bash $writeline $gman 21 "config_gmod=\"$gmod\""
