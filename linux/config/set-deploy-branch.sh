@@ -10,9 +10,6 @@ gman="./../gman.sh"
 writeline="./../utils/wline.sh"
 bash $writeline $gman 22 "config_branch=\"$branch\""
 
-cd $config_repositories
 for repository in */; do
-    cd $repository
-    bash $writeline ./hooks/post-receive 6 "branch=\"$branch\""
-    cd $config_repositories
+    bash $writeline $repositories/$repository"hooks/post-receive" 6 "branch=\"$branch\""
 done
