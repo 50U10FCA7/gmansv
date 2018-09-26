@@ -12,4 +12,4 @@ done
 
 gman="./../gman.sh"
 writeline="./../utils/wline.sh"
-bash $writeline $gman 19 "config_group='$group'"
+bash $writeline $gman 19 "config_group=\"$group\""
