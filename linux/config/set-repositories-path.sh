@@ -20,4 +20,4 @@ fi
 
 gman="./../gman.sh"
 writeline="./../utils/wline.sh"
-bash $writeline $gman 20 "config_repositories='$repositories'"
+bash $writeline $gman 20 "config_repositories=\"$repositories\""
