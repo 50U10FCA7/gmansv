@@ -12,4 +12,4 @@ done
 
 gman="./../gman.sh"
 writeline="./../utils/wline.sh"
-bash $writeline $gman 18 "config_user='$user'"
+bash $writeline $gman 18 "config_user=\"$user\""
