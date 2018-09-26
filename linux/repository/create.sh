@@ -30,5 +30,6 @@ cp $config_repositories"/hook-update.sh" $postreceive
 
 writeline="./../utils/wline.sh"
 bash $writeline $postreceive 3 "addons=\"$addons\""
-bash $writeline $postreceive 4 "name=\"$name\""
-bash $writeline $postreceive 5 "branch=\"$config_branch\""
+bash $writeline $postreceive 4 "repositories=\"$config_repositories\""
+bash $writeline $postreceive 5 "name=\"$name\""
+bash $writeline $postreceive 6 "branch=\"$config_branch\""
