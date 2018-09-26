@@ -22,6 +22,6 @@ gman="./../gman.sh"
 writeline="./../utils/wline.sh"
 bash $writeline $gman 20 "config_repositories=\"$repositories\""
 
-for repository in */; do
+for repository in $repositories/*/; do
     bash $writeline $repositories/$repository"hooks/post-receive" 4 "repositories=\"$repositories\""
 done
