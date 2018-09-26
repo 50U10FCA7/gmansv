@@ -12,6 +12,8 @@ else
 	gmod=$4
 fi
 
-repository=$config_repositories"/"$name".git/"
+postreceive=$config_repositories"/"$name".git/hooks/post-receive"
+addons=$gmod"/garrysmod/addons/"
 
-echo $gmod"/garrysmod/addons/" > $repository"addons"
+writeline="./../utils/wline.sh"
+bash $writeline $postreceive 3 "addons=\"$addons\""
