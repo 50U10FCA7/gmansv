@@ -27,6 +27,7 @@ postreceive=$repository"/hooks/post-receive"
 
 chmod -R 750 $repository"/hooks"
 cp $config_repositories"/hook-update.sh" $postreceive
+chmod -R 755 $postreceive
 
 writeline="./../utils/wline.sh"
 bash $writeline $postreceive 3 "addons=\"$addons\""
