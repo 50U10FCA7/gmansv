@@ -23,14 +23,15 @@ cd $repository
 git init --bare
 cd $prev_path
 
-postreceive=$repository"/hooks/post-receive"
+hooks=$repository"/hooks"
+postreceive=$hooks"/post-receive"
 
-chmod -R 750 $repository"/hooks"
 cp $config_repositories"/hook-update.sh" $postreceive
-chmod -R 755 $postreceive
 
 writeline="./../utils/wline.sh"
 bash $writeline $postreceive 3 "addons=\"$addons\""
 bash $writeline $postreceive 4 "repositories=\"$config_repositories\""
 bash $writeline $postreceive 5 "name=\"$name\""
 bash $writeline $postreceive 6 "branch=\"$config_branch\""
+
+chmod -R 750 $hooks
