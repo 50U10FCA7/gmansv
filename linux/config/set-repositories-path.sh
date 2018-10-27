@@ -23,7 +23,7 @@ writeline="./../utils/wline.sh"
 bash $writeline $gman 20 "config_repositories=\"$repositories\""
 
 for repository in $repositories/*/; do
-    if [[ -d $repositories/$repository ]]; then
-    	bash $writeline $repositories/$repository"hooks/post-receive" 4 "repositories=\"$repositories\""
-    fi
+	if [[ -d $repository ]]; then
+    		bash $writeline $repository"hooks/post-receive" 4 "repositories=\"$repositories\""
+    	fi
 done
